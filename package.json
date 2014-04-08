@@ -1,0 +1,17 @@
+{
+  "name": "gulp-sass-browsersync",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "~0.7.4",
+    "gulp": "~3.6.0",
+    "gulp-sass": "~0.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
