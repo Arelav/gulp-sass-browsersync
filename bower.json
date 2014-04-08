@@ -1,0 +1,19 @@
+{
+  "name": "gulp-sass-browsersync",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Arelav/gulp-sass-browsersync",
+  "authors": [
+    "Valery Kharshats <valery.kharshats@ladbrokes.co.uk>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0"
+  }
+}
