@@ -2,18 +2,36 @@
 @import "bitters/bitters";
 @import "neat";
 
-$bg-color: #edf;
+$bg-color: #f8f9ff;
+$mobile: new-breakpoint(max-width 740px 6);
 
 body {
   @include outer-container;
-//  background: $bg-color;
+  background: $bg-color;
 }
 
-.left {
+.sidebar {
   @include span-columns(3);
+
+  @include media($mobile) {
+    @include span-columns(2);
+  }
 }
 
-.right {
+.content {
   @include span-columns(9);
   @include omega;
+  .columns {
+    @include span-columns(3 of 9);
+  }
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include omega;
+
+    .columns {
+      @include span-columns(2 of 4);
+      @include omega(2n);
+    }
+  }
 }

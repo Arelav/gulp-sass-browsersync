@@ -6,9 +6,11 @@ var neat = require('node-neat').includePaths;
 var browserSync = require('browser-sync');
 
 gulp.task('sass', function () {
-  return gulp.src('app/scss/**/*.scss').pipe(sass({
+  return gulp.src('app/scss/**/*.scss')
+    .pipe(sass({
       includePaths: ['app/scss'].concat(neat)
-    })).pipe(gulp.dest('app/css'));
+    }))
+    .pipe(gulp.dest('app/css'));
 });
 
 gulp.task('browser-sync', function () {
@@ -20,5 +22,5 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('default', ['sass', 'browser-sync'], function () {
-  gulp.watch('app/scss/*.scss', ['sass']);
+  gulp.watch('app/scss/**/*.scss', ['sass']);
 });
