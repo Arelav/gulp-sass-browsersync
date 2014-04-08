@@ -2,11 +2,11 @@
 @import "bitters/bitters";
 @import "neat";
 
-$bg-color: #fff;
+$bg-color: #edf;
 
 body {
   @include outer-container;
-  background: $bg-color;
+//  background: $bg-color;
 }
 
 .left {
