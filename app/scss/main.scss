@@ -15,6 +15,9 @@ body {
 .sidebar {
   @include span-columns(3);
 
+  @include media($desktop) {
+    @include span-columns(2);
+  }
   @include media($tablet) {
     @include span-columns(2);
   }
@@ -30,13 +33,22 @@ body {
   .columns {
     @include span-columns(3 of 9);
   }
-  @include media($tablet) {
+  @include media($desktop) {
     @include span-columns(4);
     @include omega;
 
     .columns {
       @include span-columns(2 of 4);
       @include omega(2n);
+    }
+  }
+  @include media($tablet) {
+    @include span-columns(4);
+    @include omega;
+
+    .columns {
+      @include span-columns(4 of 4);
+      @include omega;
     }
   }
   @include media($mobile) {
