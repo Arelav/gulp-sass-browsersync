@@ -1,12 +1,15 @@
 @import "bourbon";
 @import "bitters/bitters";
 @import "neat";
-@import "grid-settings";
 @import "variables";
+@import "grid-settings";
 
 body {
-  @include outer-container;
   background: $bg-color;
+}
+
+#wrapper {
+  @include outer-container;
 }
 
 .sidebar {
@@ -27,7 +30,6 @@ body {
   .columns {
     @include span-columns(3 of 9);
   }
-
   @include media($tablet) {
     @include span-columns(4);
     @include omega;
@@ -37,7 +39,6 @@ body {
       @include omega(2n);
     }
   }
-
   @include media($mobile) {
     @include span-columns(1);
 

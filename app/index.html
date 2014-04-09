@@ -2,68 +2,75 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>gulp-sass</title>
   <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
 
-<div class="sidebar">
-  <fieldset>
-    <form>
-      <h2>Form Element</h2>
+<div id="wrapper">
+  <div class="sidebar">
+    <fieldset>
+      <form>
+        <h2>Form Element</h2>
 
-      <p><label for="username">Username:</label>
-        <input type="text" class="username" name="username" mouseev="true" autocomplete="off" keyev="true"
-               clickev="true"
-               style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); padding-right: 0px; background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-      </p>
+        <p><label for="username">Username:</label>
+          <input type="text" class="username" name="username" mouseev="true" autocomplete="off" keyev="true"
+                 clickev="true"
+                 style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); padding-right: 0px; background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+        </p>
 
-      <p><label for="password">Password:</label>
-        <input type="password" class="password" name="password" mouseev="true" autocomplete="off" keyev="true"
-               clickev="true"
-               style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); padding-right: 0px; background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-      </p>
+        <p><label for="password">Password:</label>
+          <input type="password" class="password" name="password" mouseev="true" autocomplete="off" keyev="true"
+                 clickev="true"
+                 style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); padding-right: 0px; background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+        </p>
 
-      <p><input class="button" type="submit" value="Submit"></p>
-    </form>
-  </fieldset>
-</div>
-<div class="content">
-  <h1>Gulp, SASS, Bourbon, Neat, Bitters</h1>
-
-  <h2>With <a href="http://thoughtbot.github.io/refills/">Reffils</a> support</h2>
-
-  <div class="columns">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque dolores, ea est illum ipsa ipsum non
-      nostrum quae similique.</p>
-
-    <p>Adipisci blanditiis corporis dolor eligendi exercitationem facere, incidunt ipsum labore molestias natus numquam
-      quibusdam, repellendus, totam vel veniam veritatis voluptatem!</p>
-
-    <p>Delectus dicta et eum inventore nesciunt nobis numquam omnis optio sed vitae! Delectus, eos, minus? Labore
-      repellendus soluta tempore vel.</p>
+        <p><input class="button" type="submit" value="Submit"></p>
+      </form>
+    </fieldset>
   </div>
-  <div class="columns">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laborum laudantium natus nisi odio officiis
-      omnis similique! Aliquam, odit, praesentium.</p>
+  <div class="content">
+    <h1>Gulp, SASS, Bourbon, Neat, Bitters</h1>
 
-    <p>At cupiditate est excepturi, expedita impedit obcaecati porro quo! Amet animi architecto minima odio rem saepe
-      sed? Labore, provident recusandae!</p>
+    <h2>With <a href="http://thoughtbot.github.io/refills/">Reffils</a> support</h2>
 
-    <p>Accusamus consectetur earum eos excepturi explicabo pariatur quaerat quisquam sed voluptatum! Consequuntur ex
-      magni molestias reiciendis? Delectus maxime sequi voluptates.</p>
+    <div class="columns">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium atque dolores, ea est illum ipsa ipsum
+        non
+        nostrum quae similique.</p>
+
+      <p>Adipisci blanditiis corporis dolor eligendi exercitationem facere, incidunt ipsum labore molestias natus
+        numquam
+        quibusdam, repellendus, totam vel veniam veritatis voluptatem!</p>
+
+      <p>Delectus dicta et eum inventore nesciunt nobis numquam omnis optio sed vitae! Delectus, eos, minus? Labore
+        repellendus soluta tempore vel.</p>
+    </div>
+    <div class="columns">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laborum laudantium natus nisi odio
+        officiis
+        omnis similique! Aliquam, odit, praesentium.</p>
+
+      <p>At cupiditate est excepturi, expedita impedit obcaecati porro quo! Amet animi architecto minima odio rem saepe
+        sed? Labore, provident recusandae!</p>
+
+      <p>Accusamus consectetur earum eos excepturi explicabo pariatur quaerat quisquam sed voluptatum! Consequuntur ex
+        magni molestias reiciendis? Delectus maxime sequi voluptates.</p>
+    </div>
+    <div class="columns">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis dicta id, laborum magni
+        nihil
+        perferendis sunt suscipit tempore.</p>
+
+      <p>Ab ad, alias aperiam assumenda autem consequatur delectus esse et fugiat ipsa laborum, officia quas qui
+        repudiandae sint totam, vero!</p>
+
+      <p>Ab accusantium aperiam consequuntur dolores expedita libero, molestias nesciunt nobis odio qui, quia quibusdam
+        reprehenderit suscipit totam voluptatum? Consequatur, voluptatibus.</p>
+    </div>
+
   </div>
-  <div class="columns">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid debitis dicta id, laborum magni nihil
-      perferendis sunt suscipit tempore.</p>
-
-    <p>Ab ad, alias aperiam assumenda autem consequatur delectus esse et fugiat ipsa laborum, officia quas qui
-      repudiandae sint totam, vero!</p>
-
-    <p>Ab accusantium aperiam consequuntur dolores expedita libero, molestias nesciunt nobis odio qui, quia quibusdam
-      reprehenderit suscipit totam voluptatum? Consequatur, voluptatibus.</p>
-  </div>
-
 </div>
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="js/app.js"></script>
