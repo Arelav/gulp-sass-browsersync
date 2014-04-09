@@ -6,9 +6,6 @@
 
 body {
   background: $bg-color;
-}
-
-#wrapper {
   @include outer-container;
 }
 
