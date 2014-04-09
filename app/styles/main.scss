@@ -24,6 +24,13 @@ body {
   }
 }
 
+fieldset {
+  @include border-top-radius(5px);
+  @include border-bottom-radius(5px);
+  @include border-left-radius(5px);
+  @include border-right-radius(5px);
+}
+
 .content {
   @include span-columns(9);
   @include omega;

@@ -5,13 +5,17 @@
   "main": "gulpfile.scripts",
   "dependencies": {},
   "devDependencies": {
+    "browser-sync": "~0.7.4",
     "gulp": "~3.6.0",
-    "gulp-sass": "~0.7.1",
-    "gulp-autoprefixer": "0.0.7",
+    "gulp-csso": "^0.2.7",
+    "gulp-imagemin": "^0.2.0",
+    "gulp-jshint": "^1.5.3",
     "gulp-load-plugins": "^0.5.0",
+    "gulp-sass": "~0.7.1",
+    "gulp-size": "^0.3.0",
+    "jshint-stylish": "^0.1.5",
     "node-bourbon": "^1.0.0",
     "node-neat": "^1.2.0",
-    "browser-sync": "~0.7.4",
     "wiredep": "^1.4.3"
   },
   "scripts": {
