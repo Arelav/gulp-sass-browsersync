@@ -1,9 +1,8 @@
 @import "bourbon";
 @import "bitters/bitters";
 @import "neat";
-
-$bg-color: #f8f9ff;
-$mobile: new-breakpoint(max-width 740px 6);
+@import "grid-settings";
+@import "variables";
 
 body {
   @include outer-container;
@@ -13,8 +12,12 @@ body {
 .sidebar {
   @include span-columns(3);
 
-  @include media($mobile) {
+  @include media($tablet) {
     @include span-columns(2);
+  }
+
+  @include media($mobile) {
+    @include span-columns(1);
   }
 }
 
@@ -25,13 +28,22 @@ body {
     @include span-columns(3 of 9);
   }
 
-  @include media($mobile) {
+  @include media($tablet) {
     @include span-columns(4);
     @include omega;
 
     .columns {
       @include span-columns(2 of 4);
       @include omega(2n);
+    }
+  }
+
+  @include media($mobile) {
+    @include span-columns(1);
+
+    .columns {
+      @include span-columns(1 of 1);
+      @include omega;
     }
   }
 }
