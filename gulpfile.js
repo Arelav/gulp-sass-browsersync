@@ -8,7 +8,8 @@ var browserSync = require('browser-sync');
 gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({
-      includePaths: ['app/scss'].concat(neat)
+      includePaths: ['app/scss'].concat(neat),
+      sourceComments: 'map'
     }))
     .pipe(gulp.dest('app/css'));
 });
