@@ -1,7 +1,7 @@
 {
   "name": "jquery",
   "version": "2.1.0",
-  "main": "dist/jquery.scripts",
+  "main": "dist/jquery.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -10,7 +10,7 @@
     "test",
     "*.md",
     "AUTHORS.txt",
-    "Gruntfile.scripts",
+    "Gruntfile.js",
     "package.json"
   ],
   "devDependencies": {
@@ -32,7 +32,6 @@
     "commit": "9434e03193c45d51bbd063a0edd1a07a6178d33f"
   },
   "_source": "git://github.com/jquery/jquery.git",
-  "_target": "~2.1.0",
-  "_originalSource": "jquery",
-  "_direct": true
+  "_target": ">=1.6",
+  "_originalSource": "jquery"
 }

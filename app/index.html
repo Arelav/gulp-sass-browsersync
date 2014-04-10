@@ -1,12 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>gulp-sass</title>
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css styles/@@timestamp.vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css styles/@@timestamp.main.css -->
   <link rel="stylesheet" href="styles/main.css"/>
+  <!-- endbuild -->
+
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
 </head>
 <body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
 
 <div class="sidebar">
 
@@ -71,7 +89,19 @@
   </div>
 
 </div>
+
+<!-- build:js scripts/@@timestamp.vendor.js -->
+<!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="scripts/app.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js scripts/@@timestamp.plugins.js -->
+<!-- endbuild -->
+
+<!-- build:js scripts/@@timestamp.main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->
+
 </body>
 </html>

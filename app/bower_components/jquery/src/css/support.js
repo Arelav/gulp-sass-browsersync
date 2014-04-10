@@ -36,7 +36,7 @@ define([
 		docElem.removeChild( container );
 	}
 
-	// Use window.getComputedStyle because jsdom on node.scripts will break without it.
+	// Use window.getComputedStyle because jsdom on node.js will break without it.
 	if ( window.getComputedStyle ) {
 		jQuery.extend(support, {
 			pixelPosition: function() {

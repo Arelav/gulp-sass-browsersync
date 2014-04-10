@@ -1,7 +1,7 @@
 {
   "name": "jquery",
   "version": "2.1.0",
-  "main": "dist/jquery.scripts",
+  "main": "dist/jquery.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -10,7 +10,7 @@
     "test",
     "*.md",
     "AUTHORS.txt",
-    "Gruntfile.scripts",
+    "Gruntfile.js",
     "package.json"
   ],
   "devDependencies": {

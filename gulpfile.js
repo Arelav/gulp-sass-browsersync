@@ -28,19 +28,77 @@ gulp.task('scripts', function () {
     .pipe($.size());
 });
 
-//Browser-sync web server with live-reload multidevice support e.t.c.
-gulp.task('browser-sync', function () {
-  browserSync.init([
-    'app/**/*.html',
-    'app/styles/*.css',
-    'app/scripts/**/*.js',
-    'app/images/**/*'
-  ],
-  {
-    server: {
-      baseDir: 'app/'
-    }
-  });
+// HTML
+gulp.task('html', ['styles', 'scripts'], function () {
+  var jsFilter = $.filter('**/*.js');
+  var cssFilter = $.filter('**/*.css');
+
+  return gulp.src('app/*.html')
+    .pipe($.replaceTask({
+      patterns: [
+        {
+          match: 'timestamp',
+          replacement: new Date().getTime()
+        }
+      ]
+    }))
+    .pipe($.useref.assets())
+    .pipe(jsFilter)
+    .pipe($.uglify())
+    .pipe(jsFilter.restore())
+    .pipe(cssFilter)
+    .pipe($.csso())
+    .pipe(cssFilter.restore())
+    .pipe($.useref.restore())
+    .pipe($.useref())
+    .pipe(gulp.dest('dist'))
+    .pipe($.size());
+});
+
+// Images
+gulp.task('images', function () {
+  return gulp.src('app/images/**/*')
+    .pipe($.cache($.imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    })))
+    .pipe(gulp.dest('dist/images'))
+    .pipe($.size());
+});
+
+// Clean
+gulp.task('clean', function () {
+  return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe($.clean());
+});
+
+// Build
+gulp.task('build', ['html', 'images']);
+
+// Default task
+gulp.task('default', ['clean'], function () {
+  gulp.start('build');
+});
+
+// Open
+gulp.task('serve', [
+  'wiredep',
+  'styles',
+  'scripts',
+  'browser-sync'
+], function () {
+
+  // Watch .scss files
+  gulp.watch('app/styles/**/*.scss', ['styles']);
+
+  // Watch .js files
+  gulp.watch('app/scripts/**/*.js', ['scripts']);
+
+  // Watch image files
+  gulp.watch('app/images/**/*', ['images']);
+
+  // Watch bower files
+  gulp.watch('bower.json', ['wiredep']);
 });
 
 // Inject Bower components
@@ -60,23 +118,17 @@ gulp.task('wiredep', function () {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('serve', [
-  'styles',
-  'scripts',
-  'wiredep',
-  'browser-sync'
-], function () {
-
-  // Watch .scss files
-  gulp.watch('app/styles/**/*.scss', ['styles']);
-
-  // Watch .js files
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-
-  // Watch image files
-  gulp.watch('app/images/**/*', ['images']);
-
-  // Watch bower files
-  gulp.watch('bower.json', ['wiredep']);
-
+//Watch + Browser-sync web server with live-reload multidevice support e.t.c.
+gulp.task('browser-sync', function () {
+  browserSync.init([
+      'app/**/*.html',
+      'app/styles/*.css',
+      'app/scripts/**/*.js',
+      'app/images/**/*'
+    ],
+    {
+      server: {
+        baseDir: 'app/'
+      }
+    });
 });
